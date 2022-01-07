@@ -21,13 +21,13 @@ export class ProductCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createProduct(): void{
+  createProduct(): void {
     this.productService.create(this.product).subscribe(() => {
       this.productService.showMessage('Produto criado.');
       this.router.navigate(['/products']);
     });
   }
-  cancel(): void{
+  cancel(): void {
     this.router.navigate(['/products']);
   }
 
